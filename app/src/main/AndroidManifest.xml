@@ -7,7 +7,6 @@
 
 
     <application
-        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -15,14 +14,15 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.TusPagos"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
 
         <activity
-            android:name=".Detallestransaccion"
-            android:exported="false"/>
+            android:name=".View.Detallestransaccion"
+            android:exported="false" />
 
         <activity
-            android:name=".MainActivity"
+            android:name=".View.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

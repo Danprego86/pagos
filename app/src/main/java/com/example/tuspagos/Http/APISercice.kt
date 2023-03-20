@@ -10,5 +10,5 @@ import retrofit2.http.POST
 interface APISercice {
 
     @POST("/api/payments/authorization")
-    fun getAutorizacion(@Body AuthRequest: AutTransaccionEntity ): Call<AutResponseEntity>
+    fun getAutorizacion(@Body AuthRequest: AutTransaccionEntity): Call<AutResponseEntity>
 }
