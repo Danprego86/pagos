@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/identificador"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="Identificador :"
+        android:textSize="15dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toStartOf="@id/id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <EditText
+
+        android:id="@+id/id"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/identificador"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/codigo_comercio"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="Codigo de comercio :"
+        android:textSize="15dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toStartOf="@id/cu"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/identificador" />
+
+
+    <EditText
+
+        android:id="@+id/cu"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/codigo_comercio"
+        app:layout_constraintTop_toBottomOf="@id/id" />
+
+    <TextView
+        android:id="@+id/numero_terminal"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="Codigo de terminal:"
+        android:textSize="15dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toStartOf="@id/terminal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/codigo_comercio" />
+
+
+    <EditText
+
+        android:id="@+id/terminal"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/numero_terminal"
+        app:layout_constraintTop_toBottomOf="@id/cu" />
+
+    <TextView
+        android:id="@+id/valor_pagar"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="Total a pagar :"
+        android:textSize="15dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toStartOf="@id/totalPagar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/terminal" />
+
+
+    <EditText
+
+        android:id="@+id/totalPagar"
+        android:layout_width="180dp"
+
+        android:inputType="numberDecimal"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/valor_pagar"
+        app:layout_constraintTop_toBottomOf="@id/terminal" />
+
+    <TextView
+        android:id="@+id/numero_tarjeta"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:gravity="center"
+        android:text="Numero de Tarjeta :"
+        android:textSize="15dp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toStartOf="@id/numTarjeta"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/valor_pagar" />
+
+
+    <EditText
+
+        android:id="@+id/numTarjeta"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/numero_tarjeta"
+        app:layout_constraintTop_toBottomOf="@id/totalPagar" />
+
+
+
+    <Button
+        android:id="@+id/pago"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="Pagar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/numero_tarjeta"
+        android:onClick="saveRecord"/>
+
+    <Button
+
+        android:id="@+id/view_transactions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:layout_marginTop="72dp"
+        android:text="Ver transacciones"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/pago"
+        android:onClick="viewTransactions"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
