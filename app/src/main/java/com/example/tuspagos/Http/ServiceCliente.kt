@@ -32,7 +32,7 @@ object ServiceCliente {
         .build()
 
 
-    //Creacion de Retrofid
+    //Creacion de Retrofit
     private val retrofid = Retrofit.Builder()
         .baseUrl("http://192.168.3.10:8080") //
         .addConverterFactory(GsonConverterFactory.create())

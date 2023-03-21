@@ -5,6 +5,7 @@ import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
 @Entity(tableName = "AutTransaccionEntity")
+
 data class AutTransaccionEntity (
      @PrimaryKey(autoGenerate = false)
      @SerializedName("id")

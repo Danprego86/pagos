@@ -5,6 +5,7 @@ import androidx.room.PrimaryKey
 import com.google.gson.annotations.SerializedName
 
 @Entity(tableName = "AutResponseEntity")
+
 data class AutResponseEntity (
     @PrimaryKey(autoGenerate = false)
     @SerializedName("receiptId")

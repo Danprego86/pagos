@@ -44,7 +44,7 @@ class MainActivity : AppCompatActivity() {
 
         val datos = DatosGlobales()//Exporte de datos previamente ingresados
         val Id = UUID.randomUUID()//Numero random para ID
-        
+
         binding.id.setText(Id.toString())
         binding.cu.setText(datos.codigoComercio)
         binding.terminal.setText(datos.terminal)
