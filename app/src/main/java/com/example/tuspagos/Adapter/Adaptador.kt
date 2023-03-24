@@ -10,9 +10,7 @@ import com.example.tuspagos.R
 
 
 // A la clase Adaptador se le pasa la lista "AutTransaccion" y se extiende a la clase "ViewHolder"
-class Adaptador(private val mList: ArrayList<AutResponseEntity>) :
-    RecyclerView.Adapter<Adaptador.ViewHolder>() {
-
+class Adaptador(private val mList: ArrayList<AutResponseEntity>) : RecyclerView.Adapter<Adaptador.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context)

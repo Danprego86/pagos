@@ -9,8 +9,7 @@
     android:layout_marginStart="8dp"
     android:layout_marginTop="8dp"
     android:orientation="vertical"
-    tools:context=".View.Detallestransaccion"
-    >
+    tools:context=".View.Detallestransaccion">
     <EditText
         android:id="@+id/FilterTransactions"
         android:layout_width="match_parent"

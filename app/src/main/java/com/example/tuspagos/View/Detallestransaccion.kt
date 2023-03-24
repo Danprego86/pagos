@@ -8,8 +8,11 @@ import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.room.Room
 import com.example.tuspagos.Adapter.Adaptador
 import com.example.tuspagos.DataBase.DataAplicacion
+import com.example.tuspagos.DataBase.DataBase
+import com.example.tuspagos.DataBase.DataBaseDao
 //import com.example.tuspagos.DataBase.DataBase
 //import com.example.tuspagos.DataBase.DataBaseDao
 import com.example.tuspagos.Model.AutResponseEntity
@@ -23,7 +26,8 @@ class Detallestransaccion : AppCompatActivity() {
     private lateinit var binding: ListadotxBinding
     var listTrx: ArrayList<AutResponseEntity> = ArrayList<AutResponseEntity>()
     lateinit var myListAdapter: Adaptador
-    private lateinit var bookDao: DataAplicacion.Companion
+    //private lateinit var bookDao: DataAplicacion.Companion
+    private lateinit var bookDao: DataBaseDao
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -32,13 +36,13 @@ class Detallestransaccion : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        /* val dataBase = Room.databaseBuilder(
+        val dataBase = Room.databaseBuilder(
              this,
              DataBase::class.java,
              "Database"
          )
              .build()
-         bookDao = dataBase.dataBaseDao()*/
+         bookDao = dataBase.dataBaseDao()
 
 
 
@@ -81,7 +85,7 @@ class Detallestransaccion : AppCompatActivity() {
 
             val gson = Gson()
             val myArrayList =
-                ArrayList(bookDao.dataBase.dataBaseDao().getTransaccionFilter("%" + data + "%"))
+                ArrayList(bookDao.getTransaccionFilter("%" + data + "%"))
             Log.i("MyTAG", "*****   ${gson.toJson(myArrayList)} *****")
 
             launch(Dispatchers.Main.immediate) {
